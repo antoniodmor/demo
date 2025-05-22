@@ -1,0 +1,84 @@
+{
+	"info": {
+		"_postman_id": "a5994051-aa91-4ade-9310-34b4a550d875",
+		"name": "Prueba",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "14116599"
+	},
+	"item": [
+		{
+			"name": "Subida",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n         \"filename\": \"imagen.png\",\r\n         \"contentType\": \"image/png\",\r\n         \"encodedFile\": \"iVBORw0KGgoAAAANSUhEUgAAAAUA...\"\r\n     }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/assets/upload",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"assets",
+						"upload"
+					]
+				},
+				"description": "Generated from cURL: curl -X POST \"http://localhost:8080/assets/upload\" \\\r\n     -H \"Content-Type: application/json\" \\\r\n     -d '{\r\n         \"filename\": \"imagen.png\",\r\n         \"contentType\": \"image/png\",\r\n         \"encodedFile\": \"iVBORw0KGgoAAAANSUhEUgAAAAUA...\"\r\n     }'\r\n\r\n"
+			},
+			"response": []
+		},
+		{
+			"name": "consulta",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/mgmt/1/assets?filename=ntt.png&filetype=image/png&sortDirection=asc",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"mgmt",
+						"1",
+						"assets"
+					],
+					"query": [
+						{
+							"key": "filename",
+							"value": "ntt.png"
+						},
+						{
+							"key": "filetype",
+							"value": "image/png"
+						},
+						{
+							"key": "sortDirection",
+							"value": "asc"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
